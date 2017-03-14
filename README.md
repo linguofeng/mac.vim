@@ -1,0 +1,2 @@
+# mac.vim
+macOS vimrc
