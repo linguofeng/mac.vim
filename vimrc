@@ -10,10 +10,24 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+Plugin 'rakr/vim-one'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-color wombat256mod              " 配色
+" color wombat256mod              " 配色
+colorscheme one
+set background=dark
+let g:airline_theme='one'
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:Powerline_symbols='unicode'
+set encoding=utf-8
+set laststatus=2
 
 set tabstop=4                   " 设置tab键的宽度
 set shiftwidth=4                " 换行时行间交错使用4个空格
@@ -24,7 +38,7 @@ set cindent shiftwidth=4        " 自动缩进4空格
 set smartindent                 " 智能自动缩进
 set ai                          " 设置自动缩进
 set nu                          " 显示行号
-set guifont=Monaco              " 设置字体
+" set guifont=Monaco\ for\ Powerline              " 设置字体
 set showmatch                   " 显示括号配对情况
 set hlsearch                    " 开启高亮显示结果
 set incsearch                   " 开启实时搜索功能
